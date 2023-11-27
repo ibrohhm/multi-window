@@ -15,7 +15,7 @@ $container.style.top = `${screen.availHeight/2-40}px`
 $container.style.left = `${screen.availWidth/4}px`
 $container.style.width = `${screen.availWidth/2}px`
 $container.style.height = `80px`
-
+if(!!screenId) $container.classList.add('hidden')
 
 function drawLines(){
   localStorage.setItem(screenId, JSON.stringify({x: canvas.width/2 + window.screenX, y: canvas.height/2 + window.screenY}));
